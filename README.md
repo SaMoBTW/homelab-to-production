@@ -2,7 +2,7 @@
 
 A deliberate, self-directed path from a bare 3-node [k3s](https://k3s.io/) cluster to a production-shaped homelab — GitOps, observability, backup/disaster recovery, and the real debugging stories along the way.
 
-This isn't a tutorial-clone. Each phase follows a [roadmap](./ROADMAP.md) that names the tool and the target shape, but not the exact manifest — the point is building real judgment about *why* a given tool or pattern fits, not copy-pasting one.
+This isn't a tutorial-clone. Each phase follows a [roadmap](./ROADMAP.md) I made with the help of some Youtube videos and Claude's research that names the tool(s) and the target shape, but not the exact manifest/Steps — the point is building real judgment about *why* a given tool or pattern fits, not copy-pasting one.
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![k3s](https://img.shields.io/badge/k3s-FFC61C?style=flat&logo=k3s&logoColor=black)
