@@ -45,7 +45,3 @@ graph TB
 Real problems hit and fixed along the way — not staged, not skipped over:
 
 - [pgAdmin OOMKilled during Phase 0](./incidents/oom-killed-pgadmin.md)
-
-## Why document this
-
-Most homelab repos show the final YAML. This one tries to show the reasoning that got there — the tradeoffs considered, the things that broke, and why the fix was the fix. That's the part that doesn't show up in a "deployed X to Kubernetes" resume line.
