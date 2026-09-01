@@ -31,7 +31,7 @@ graph TB
 | Phase | What | Status |
 |---|---|---|
 | 0 | [Manual deployment, by hand](./phases/phase-0-manual-deploy.md) — pgAdmin as Deployment + PVC + Service, no Helm, no generator | ✅ Done |
-| 1 | Cluster structure — namespaces, mandatory resource limits, node affinity | 🚧 In progress |
+| 1 | [Cluster structure](./phases/phase-1-cluster-structure.md) — namespaces, mandatory resource limits, node labeling | ✅ Done |
 | 2 | Storage — Longhorn replacing `local-path` | ⏳ Planned |
 | 3 | GitOps — Argo CD, app-of-apps, two repos | ⏳ Planned |
 | 4 | Secrets — Sealed Secrets | ⏳ Planned |
