@@ -1,7 +1,7 @@
 # Incident: pgAdmin OOMKilled on first deploy
 
 **Date:** 2026-08-30
-**Phase:** [0 — Manual deployment](../phases/phase-0-manual-deploy.md)
+**Phase:** [0: Manual deployment](../phases/phase-0-manual-deploy.md)
 **Severity:** Low (single-node, no external users). Documented for the debugging process, not the stakes.
 
 ## Summary

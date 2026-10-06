@@ -42,7 +42,7 @@ spec:
             - name: PGADMIN_DEFAULT_EMAIL
               value: "<redacted>"
             - name: PGADMIN_DEFAULT_PASSWORD
-              value: "<redacted — plaintext here is a known, deliberate gap; Phase 4 replaces this with Sealed Secrets>"
+              value: "<redacted: plaintext here is a known, deliberate gap; Phase 4 replaces this with Sealed Secrets>"
           resources:
             requests:
               cpu: "100m"

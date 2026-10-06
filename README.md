@@ -1,8 +1,8 @@
 # Homelab to Production
 
-A deliberate, self-directed path from a bare 3-node [k3s](https://k3s.io/) cluster to a production-shaped homelab — GitOps, observability, backup/disaster recovery, and the real debugging stories along the way.
+A deliberate, self-directed path from a bare 3-node [k3s](https://k3s.io/) cluster to a production-shaped homelab: GitOps, observability, backup/disaster recovery, and the real debugging stories along the way.
 
-This isn't a tutorial-clone. Each phase follows a [roadmap](./ROADMAP.md) I made with the help of some Youtube videos and Claude's research that names the tool(s) and the target shape, but not the exact manifest/Steps — the point is building real judgment about *why* a given tool or pattern fits, not copy-pasting one.
+This isn't a tutorial-clone. Each phase follows a [roadmap](./ROADMAP.md) I made with the help of some Youtube videos and Claude's research that names the tool(s) and the target shape, but not the exact manifest/Steps. The point is building real judgment about *why* a given tool or pattern fits, not copy-pasting one.
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![k3s](https://img.shields.io/badge/k3s-FFC61C?style=flat&logo=k3s&logoColor=black)
@@ -24,24 +24,24 @@ graph TB
     end
 ```
 
-`samir-nas` also runs an unrelated, pre-existing Plex/Sonarr/Radarr Docker Compose stack on the same physical box — outside this cluster, but a real constraint the exposure phase has to account for.
+`samir-nas` also runs an unrelated, pre-existing Plex/Sonarr/Radarr Docker Compose stack on the same physical box. It's outside this cluster, but a real constraint the exposure phase has to account for.
 
 ## Progress
 
 | Phase | What | Status |
 |---|---|---|
-| 0 | [Manual deployment, by hand](./phases/phase-0-manual-deploy.md) — pgAdmin as Deployment + PVC + Service, no Helm, no generator | ✅ Done |
-| 1 | [Cluster structure](./phases/phase-1-cluster-structure.md) — namespaces, mandatory resource limits, node labeling | ✅ Done |
-| 2 | [Storage](./phases/phase-2-longhorn.md) — Longhorn replacing `local-path`, with a real node-kill test | ✅ Done |
-| 3 | [GitOps](./phases/phase-3-gitops.md) — Argo CD app-of-apps, Jenkins CI, image tag bumps through Git | ✅ Done |
-| 4 | [Secrets](./phases/phase-4-sealed-secrets.md) — Sealed Secrets, credential rotation over history rewriting | ✅ Done |
+| 0 | [Manual deployment, by hand](./phases/phase-0-manual-deploy.md): pgAdmin as Deployment + PVC + Service, no Helm, no generator | ✅ Done |
+| 1 | [Cluster structure](./phases/phase-1-cluster-structure.md): namespaces, mandatory resource limits, node labeling | ✅ Done |
+| 2 | [Storage](./phases/phase-2-longhorn.md): Longhorn replacing `local-path`, with a real node-kill test | ✅ Done |
+| 3 | [GitOps](./phases/phase-3-gitops.md): Argo CD app-of-apps, Jenkins CI, image tag bumps through Git | ✅ Done |
+| 4 | [Secrets](./phases/phase-4-sealed-secrets.md): Sealed Secrets, credential rotation over history rewriting | ✅ Done |
 | 5 | [Exposure](./phases/phase-5-exposure.md): in-cluster Cloudflare Tunnel, one hostname public, QUIC vs MTU | ✅ Done |
-| 6 | Observability — kube-prometheus-stack | ⏳ Planned |
-| 7 | Backup/DR — Velero, off-box target | ⏳ Planned |
+| 6 | [Observability](./phases/phase-6-observability.md): kube-prometheus-stack via Argo CD, Slack alerting, three alerts triggered on purpose | ✅ Done |
+| 7 | Backup/DR: Velero, off-box target | ⏳ Planned |
 | 8 | Practicing failure on purpose | ⏳ Planned |
 
 ## Incidents
 
-Real problems hit and fixed along the way — not staged, not skipped over:
+Real problems hit and fixed along the way, not staged and not skipped over:
 
 - [pgAdmin OOMKilled during Phase 0](./incidents/oom-killed-pgadmin.md)
