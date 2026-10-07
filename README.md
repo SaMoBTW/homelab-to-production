@@ -42,6 +42,6 @@ graph TB
 
 ## Incidents
 
-Real problems hit and fixed along the way, not staged and not skipped over:
+Problems hit and fixed along the way:
 
 - [pgAdmin OOMKilled during Phase 0](./incidents/oom-killed-pgadmin.md)
