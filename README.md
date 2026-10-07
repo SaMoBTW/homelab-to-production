@@ -37,7 +37,7 @@ graph TB
 | 4 | [Secrets](./phases/phase-4-sealed-secrets.md): Sealed Secrets, credential rotation over history rewriting | ✅ Done |
 | 5 | [Exposure](./phases/phase-5-exposure.md): in-cluster Cloudflare Tunnel, one hostname public, QUIC vs MTU | ✅ Done |
 | 6 | [Observability](./phases/phase-6-observability.md): kube-prometheus-stack via Argo CD, Slack alerting, three alerts triggered on purpose | ✅ Done |
-| 7 | Backup/DR: Velero, off-box target | ⏳ Planned |
+| 7 | [Backup](./phases/phase-7-backup.md): Velero to Cloudflare R2, nightly schedule with alerts, restore tested | ✅ Done |
 | 8 | Practicing failure on purpose | ⏳ Planned |
 
 ## Incidents
